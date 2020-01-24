@@ -1,0 +1,337 @@
+/* Parametre de base de la page (Texte,Background) */
+
+html{
+	height: 100%;
+	
+} 
+body{
+	margin: 10px;
+	padding: 10px;
+	background-image:url(image/fond2.png); 
+	background-size:cover;
+	background-color:#444;
+
+ 	background-attachment:fixed;
+ 	background-repeat:no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	z-index: 2;
+}
+h1{	
+	font-weight: 700;
+}
+.image {
+float:left;
+}
+a{
+	text-decoration: none;
+	font-weight: 700;
+	
+}
+.text_center{
+	text-align: center;
+	
+}
+.text_white{
+	color: white;
+
+}
+
+
+/* Mise en forme du bouton du formulaire de contact */
+.submit{
+	font-weight: 700;
+	margin-top: 10px;
+	width: 70px;
+	height: 30px;
+	background-color: #b1b7c2;
+	color: white;
+	border: none;
+	border-radius: 10px; 
+}
+
+/* Mise en Forme des paragraphe */
+
+.disposition_ligne_paragraphe{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align:justify;
+
+}
+.image_paragraphe{
+	width: 100px;
+	height: 100px;
+}
+
+/* Mise en forme du header générale */
+.contenair_header{
+	top: 0;
+	right: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+
+}
+
+/* Mise en forme générale du contenu */
+.container_principal{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	padding-top: 80px;
+	z-index: 3;
+
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: white;
+	width: 100%;
+	padding-bottom: 50px;
+	z-index: 4;
+}
+
+/* Mise en fome générale des section */
+.section{
+	display: flex;
+	align-items: center;
+	color: #b1b7c2;
+	background-color: white;
+	z-index: 4;
+	width: 90%;
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+.section_parametre1:hover {
+	color: #b1b7c2;
+
+}
+
+
+/* Mise en forme générale des news */
+.section_news_animation
+{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: row;
+    transition: color 0.3s,opacity 1s;
+   
+
+}
+
+/* Mise en forme générale du diaporama + animation */
+.container_diapo{
+	margin: 15px;
+	box-shadow: 2px 5px 15px 1px rgba(0, 0, 0, 0);
+	z-index: 3;
+}
+
+@keyframes diapoanim {
+    0% {z-index: 3;}
+    25%{z-index: 3;}
+    50%{z-index: 3;}
+    75%{z-index: 3;}
+    100% {z-index: 3;}
+}
+
+
+.diapo{
+	display: flex;
+	flex-direction: column-reverse;
+	color: black;
+	
+	animation-name: diapoanim;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+    position: absolute;
+	
+}
+
+.diapo2{
+	display: flex;
+	flex-direction: column-reverse;
+	position: absolute;
+	z-index: 3;
+
+
+}
+
+/* Mise en forme de l'appli Google Map */
+.map{
+	width: 100%;
+	height: 300px;
+	border: none;
+}
+
+/* Mise en forme du tableau des avantages */
+.table_prix td,table{
+	border: 2px solid black;
+
+}
+/* Mise en forme du footer */
+
+.footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 12px;
+	background-color: #b1b7c2;
+	padding: 15px;
+	z-index: 3;
+
+
+}
+
+
+
+/* CSS pour formulaire et connexion */ 
+
+/* affichage général du formulaire  */
+
+.affichage{
+	width:960px;
+	margin:20px;
+	min-height:50px;
+}
+
+/* mise en forme du contour du formulaire  */
+
+.formulaire{
+	background:white;
+	border:1px solid #b1b7c2;
+	margin:0 auto;
+	width:350px;
+	font-size:16px;
+}
+
+/* mise en forme formulaire général */
+
+.formulaire label{
+	display:block;
+	padding:10px 30px 0px 30px;
+	margin:10px 0px 0px 0px;
+}
+
+.formulaire input[type="text"],
+.formulaire input[type="password"],
+.formulaire input[type="datetime-local"],
+.formulaire input[type="number"],
+.formulaire input[type="email"]{
+	border: solid 1px #E5E5E5;
+	background: #FFFFFF;
+	margin: 5px 30px 0px 30px;
+	padding: 9px;
+	display:block;
+	font-size:16px;
+	width:76%;
+}
+.formulaire input[type="text"]:focus,
+.formulaire input[type="password"]:focus,
+.formulaire input[type="datetime-local"]:focus,
+.formulaire input[type="number"]:focus,
+.formulaire input[type="email"]:focus
+{
+	background:#feffef;
+}
+
+.formulaire .bottom{
+	background-color:#444;
+	border-top:1px solid #ddd;
+	margin-top:30px;
+	clear:both;
+	color:#fff;
+	text-shadow:1px 1px 1px #000;
+}
+
+.formulaire .bottom a{
+	display:block;
+	clear:both;
+	padding:10px 30px;
+	text-align:right;
+	color:#F78181;
+	text-shadow:1px 1px 1px #000;
+}
+
+
+.formulaire input[type="submit"] {
+	background: #e3e3e3;
+	border: 1px solid #ccc;
+	color: #333;
+	font-family: "Trebuchet MS", "Myriad Pro", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 8px 0 9px;
+	text-align: center;
+	width: 200px;
+	cursor:pointer;
+	float:right;
+	margin:15px 20px 10px 10px;
+	text-shadow: 0px 1px 0px #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 2px #fff inset;
+}
+
+.formulaire input[type="submit"]:hover {
+	background: #d9d9d9;
+	color: #222;
+
+}
+/* mise en forme des postes et des commentaires */
+.programme{
+	background:white;
+	border:1px solid #b1b7c2;
+	margin:0 auto;
+	width:100%;
+	font-size:16px;
+}
+.programme span{
+	display:block;
+	padding:10px 50px 0px 30px;
+	margin:20px 0px 0px 0px;
+	color: #b1b7c2;
+	font-size: 30px;
+	text-decoration: underline;
+}
+.programme p{
+	display:block;
+	padding:10px 50px 0px 30px;
+	margin:20px 0px 0px 0px;
+	color: #F78181;
+	font-size: 22px;
+}
+.programme h2{
+	display:block;
+	padding:10px 50px 0px 30px;
+	margin:20px 0px 0px 0px;
+	color: #b1b7c2;
+	font-size: 20px;
+	border:1px solid #F78181;
+	border-radius: 10px;
+}
+
+.programme label{
+	display:block;
+	padding:5px 20px 0px 30px;
+	margin:0px 0px 0px 0px;
+	color: #b1b7c2;
+	font-size: 20px;
+	border: 2px solid  #D8D8D8;
+	border-radius: 10px;
+}
+

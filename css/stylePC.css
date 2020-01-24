@@ -1,0 +1,234 @@
+@media screen and (min-width: 1000px){
+
+/* Mise en forme du header pour PC */
+.header{
+	display: flex;
+	justify-content: space-between;
+	background-color: #b1b7c2;
+	min-height: 70px;
+	top: 0;
+	right: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+
+}
+/* mise en forme d'un titre */
+.titre{
+	background-color: #b1b7c2;
+    	color: #FE2E64;
+    	padding: 25px;
+    	font-size: 18px;
+    	border: none;
+    	cursor: pointer;
+    	left:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	transition: background-color 0.5s;
+}
+/* quand on passe la souris sur le titre */
+.titre:hover{
+	background-color:#93061e;
+
+}
+
+
+.name{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 10%;
+	height: 100%;
+	min-height: 70px
+}
+
+/* Menu Pc */
+.menuPC{
+
+	flex-direction: row;
+	justify-content: center;
+	width: 35%;
+	height: 100%;
+	min-height: 70px;
+	position: relative;
+    	display: inline-block;
+}
+
+.menuPC-content {
+    display: none;
+    position: absolute;
+    background-color: #b1b7c2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px ;
+    z-index: 1;
+}
+
+.menuPC-content a {
+    color: #E0E0F8;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menuPC-content a:hover {background-color: #b9cae4}
+
+.menuPC:hover .menuPC-content {
+    display: block;
+}
+
+.menuPC:hover .titre {
+    background-color: #b9cae4;
+}
+.text_menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FE2E64;
+	height: auto;
+	padding-left: 25px;
+	padding-right: 15px;
+	transition: background-color 0.5s;
+	display: flex;
+	flex-direction: row;
+	width: 10%;
+	text-decoration:none;
+	min-height: 70px;
+	left:0
+}
+
+.text_menu:hover{
+	background-color:#93061e;
+
+}
+
+/* On rend invisible le Menu portable */
+.menuPort{
+	display: none;
+}
+.sous_menu{
+	display: none;
+}
+
+/* Mise en forme des texte */
+
+.paragraphe{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-weight: 500;
+	padding: 10px;
+}
+
+/* Mise en forme du formulaire */
+.input{
+	width: 70%;
+	height: 5vh;
+	border: 1px solid grey;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+.text_contact{
+	width: 70%;
+	height: 20vh;
+	max-width: 1000px;
+	max-height: 100px;
+	border: 1px solid grey;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+/* Parametre pour les differents type de section */
+
+.section_column{
+	flex-direction: column;
+}
+
+/* Mise en forme des news */
+
+.section_news_image{
+	border-radius: 20%;
+	margin-right: 10px;
+	height: 100%;
+	filter: grayscale(100%);
+
+}
+.section_news{
+	width: 90%;
+	height: 150px;
+	box-shadow: 2px 5px 15px 1px rgba(0, 0, 0, 0.5);
+	transition: background-color 0.3s, color 0.5s;
+	padding: 10px;
+	align-items: center;
+	justify-content: space-around;
+}
+.section_news:hover .section_news_animation{
+	opacity: 0.1;
+}
+.section_news_animation:hover + .info_news,.info_news:hover
+{
+	display: flex;
+	align-items: center;
+
+	z-index: 7;	
+	position: absolute;
+	overflow: hidden;
+	justify-content: center;
+}
+/* Animation des news sur PC */
+@keyframes slide {
+
+	0%{
+		margin-top: 25%;
+		opacity: 0;
+	}
+	100%{
+		margin-top: 0%;
+		opacity: 1;
+	}
+
+}
+.info_news
+{
+	display: none;
+	z-index: 2;
+	color: black;
+	animation-name: slide;
+	animation-duration: 1.2s;
+	animation-iteration-count: 1;
+	animation-direction: alternate;
+	width: 50%;
+
+}
+
+/* Mise en forme des diapositives sur PC */
+
+.container_diapo{
+	height: 75vh;
+	width: 81vw;
+}
+.diapo{
+	background: url("../image/Ekko.jpg") no-repeat;
+	background-size: cover;
+	height: 75vh;
+	width: 81vw;
+}
+.diapo2{
+	background: url("../image/moyen.png") no-repeat;
+	background-size: cover;
+	height: 75vh;
+	width: 81vw;
+}
+.info_diapo{
+	box-sizing: border-box;
+	padding: 10px;
+	width: 100%;
+	height: 120px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+}
